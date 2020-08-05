@@ -4,7 +4,7 @@
 	<portal to="title">{{ $t('notFound') }}</portal>
 
 	<div class="_fullinfo">
-		<img src="https://xn--931a.moe/assets/not-found.jpg" class="_ghost"/>
+		<img src="/assets/404.png" class="_ghost"/>
 		<div>{{ $t('notFoundDescription') }}</div>
 	</div>
 </div>

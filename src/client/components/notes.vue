@@ -1,7 +1,7 @@
 <template>
 <div class="mk-notes">
 	<div class="_fullinfo" v-if="empty">
-		<img src="https://xn--931a.moe/assets/info.jpg" class="_ghost"/>
+		<img src="/assets/info.png" class="_ghost"/>
 		<div>{{ $t('noNotes') }}</div>
 	</div>
 

@@ -17,7 +17,7 @@ export const defaultSettings = {
 	uploadFolder: null,
 	pastedFileName: 'yyyy-MM-dd HH-mm-ss [{{number}}]',
 	memo: null,
-	reactions: ['👍', '❤️', '😆', '🤔', '😮', '🎉', '💢', '😥', '😇', '🍮'],
+	reactions: ['✅', '👍', '👎', '🎉', '🙏', '❤️', '😆', '🤔', '😮', '😥'],
 	mutedWords: [],
 };
 
@@ -35,7 +35,6 @@ export const defaultDeviceUserSettings = {
 		'-',
 		'followRequests',
 		'featured',
-		'explore',
 		'announcements',
 		'search',
 		'-',
@@ -152,11 +151,6 @@ export default () => new Vuex.Store({
 				icon: faFireAlt,
 				to: '/featured',
 			},
-			explore: {
-				title: 'explore',
-				icon: faHashtag,
-				to: '/explore',
-			},
 			announcements: {
 				title: 'announcements',
 				icon: faBroadcastTower,
@@ -211,22 +205,6 @@ export default () => new Vuex.Store({
 				icon: faFileAlt,
 				get show() { return getters.isSignedIn; },
 				to: '/my/pages',
-			},
-			games: {
-				title: 'games',
-				icon: faGamepad,
-				to: '/games',
-			},
-			scratchpad: {
-				title: 'scratchpad',
-				icon: faTerminal,
-				to: '/scratchpad',
-			},
-			rooms: {
-				title: 'rooms',
-				icon: faDoorClosed,
-				get show() { return getters.isSignedIn; },
-				get to() { return `/@${state.i.username}/room`; },
 			},
 			deck: {
 				title: deckmode ? 'undeck' : 'deck',
